@@ -11,22 +11,22 @@ const Menu = () => {
         </li>
         <li className="mb-4">
           <Link href="/about" className="hover:text-gray-400">
-            About Us
+            Select the Sprint
           </Link>
         </li>
         <li className="mb-4">
           <Link href="/contact" className="hover:text-gray-400">
-            Contact Us
+            Select the fixed version (release)/Add issues to the fixed version
           </Link>
         </li>
         <li className="mb-4">
           <Link href="/download" className="hover:text-gray-400">
-            Download
+            Create release page
           </Link>
         </li>
         <li className="mb-4">
           <Link href="/upload" className="hover:text-gray-400">
-            Upload
+            Create SSCM ticket/Link tickets into SSCM
           </Link>
         </li>
       </ul>
