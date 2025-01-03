@@ -6,27 +6,43 @@ const Menu = () => {
       <ul>
         <li className="mb-4">
           <Link href="/" className="hover:text-gray-400">
-            Home
+            1. Configuration
           </Link>
         </li>
         <li className="mb-4">
           <Link href="/about" className="hover:text-gray-400">
-            Select the Sprint
+            2. Select the Sprint
           </Link>
         </li>
         <li className="mb-4">
           <Link href="/contact" className="hover:text-gray-400">
-            Select the fixed version (release)/Add issues to the fixed version
+            3. Select the fixed version (release)
           </Link>
         </li>
         <li className="mb-4">
+          <Link href="/contact" className="hover:text-gray-400">
+            4. Add issues to the fixed version
+          </Link>
+        </li>
+
+        <li className="mb-4">
           <Link href="/download" className="hover:text-gray-400">
-            Create release page
+            5. Create release page
           </Link>
         </li>
         <li className="mb-4">
           <Link href="/upload" className="hover:text-gray-400">
-            Create SSCM ticket/Link tickets into SSCM
+            6. Create SSCM ticket
+          </Link>
+        </li>
+        <li className="mb-4">
+          <Link href="/upload" className="hover:text-gray-400">
+            7. Link tickets into SSCM
+          </Link>
+        </li>
+        <li className="mb-4">
+          <Link href="/upload" className="hover:text-gray-400">
+            8. Finalize versions
           </Link>
         </li>
       </ul>

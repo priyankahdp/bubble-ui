@@ -24,31 +24,37 @@ const AboutPage = () => {
 
   return (
     <div className="container mt-4">
-      <h1>About Us</h1>
       <button className="btn btn-primary mb-3" onClick={fetchData}>
-        VIEW DATA
+        Load available sprints
       </button>
       {loading && <p>Loading the required contents...</p>}
       {data && (
-        <table className="table table-striped table-bordered">
-          <thead className="thead-dark">
-            <tr>
-              {data.fields.map((field) => (
-                <th key={field}>{field}</th>
+        <div className="table-responsive" style={{ maxHeight: '300px', overflowY: 'auto' }}>
+          <table className="table table-striped table-bordered">
+            <thead className="thead-dark">
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>State</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Goal</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.values.slice(0, 10).map((sprint) => (
+                <tr key={sprint.id}>
+                  <td>{sprint.id}</td>
+                  <td>{sprint.name}</td>
+                  <td>{sprint.state}</td>
+                  <td>{new Date(sprint.startDate).toLocaleString()}</td>
+                  <td>{new Date(sprint.endDate).toLocaleString()}</td>
+                  <td>{sprint.goal}</td>
+                </tr>
               ))}
-            </tr>
-          </thead>
-          <tbody>
-            {/* Assuming you have an array of items to display */}
-            {/* Replace this with actual data if available */}
-            <tr>
-              <td>1</td>
-              <td>Sample Name</td>
-              <td>active</td>
-              <td>2024-01-01</td>
-            </tr>
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </div>
       )}
     </div>
   );
